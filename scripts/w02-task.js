@@ -22,7 +22,15 @@ imageElement.setAttribute('alt', `Profile image of ${fullname}`)
 
 /* Step 5 - Array */
 const foods =["encebollado", "arroz con menestra", "empanadas", "hamburguer"]
-foods.forEach((food)=>(foodElement.innerHTML = (`${food}`)))
+foods.push("ceviche de pollo")
+const foods1 = ["salad", "pastas", "Morocho", "papi pollo", "arepas"]
+foodElement.innerHTML = foods
+foodElement.innerHTML += `<br>${foods1}`
+foods.shift()
+foodElement.innerHTML += `<br>${foods1}`
+foods.pop()
+foodElement.innerHTML += `<br>${foods1}`
+
 
 
 
