@@ -78,12 +78,15 @@ let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 document.querySelector('#array').innerHTML = numbersArray
 /* Output Odds Only Array */
 document.querySelector('#odds').innerHTML = numbersArray.filter(numberArray => numberArray % 2 === 1)
-   
-
-/* Output Evens Only Array */
+   /* Output Evens Only Array */
 document.querySelector('#evens').innerHTML = numbersArray.filter(numberArray => numberArray % 2 === 0)
 /* Output Sum of Org. Array */
-
+let sumOfArray = document.querySelector('#sumOfArray')
+let reduceArray = numbersArray.reduce((sum, number)=>sum + number)
+sumOfArray.innerHTML = reduceArray
 /* Output Multiplied by 2 Array */
-
+let multiplied = document.querySelector("#multiplied")
+let mapArray = numbersArray.map((numberArray)=>numberArray*2)
+multiplied.innerHTML = mapArray
 /* Output Sum of Multiplied by 2 Array */
+document.querySelector("#sumOfMultiplied").innerHTML = mapArray.reduce((sum, number)=>sum + number)
