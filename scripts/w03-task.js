@@ -58,15 +58,30 @@ const divideNumbers = function(){
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers)
 
 /* Decision Structure */
+document.querySelector('#getTotal').addEventListener('click', ()=>{
+    let subtotal = Number(document.querySelector('#subtotal').value)
+    let total = document.querySelector('#total')
+    
+    if(document.getElementById('member').checked){
+        let discount = (subtotal * 20) /100
+        let result = subtotal - discount
+        total.innerHTML = `$${result}.00`
 
+    }else{
+        total.innerHTML = `$${subtotal}.00`
+    }
+})
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
-
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+document.querySelector('#array').innerHTML = numbersArray
 /* Output Odds Only Array */
+document.querySelector('#odds').innerHTML = numbersArray.filter(numberArray => numberArray % 2 === 1)
+   
 
 /* Output Evens Only Array */
-
+document.querySelector('#evens').innerHTML = numbersArray.filter(numberArray => numberArray % 2 === 0)
 /* Output Sum of Org. Array */
 
 /* Output Multiplied by 2 Array */
