@@ -1,7 +1,20 @@
 /* LESSON 3 - Programming Tasks */
-
+document.querySelector('#addNumbers').addEventListener('click',addNumbers )
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
+function add(number1, number2) {
+    return number1 + number2;
+}
+
+function addNumbers() {
+    let number1 = Number(document.querySelector('#add1').value)
+    let number2 = Number(docuement.querySelector('#add2').value)
+    let resultSum = add(number1, number2)
+    docuement.querySelector('#sum').value = resultSum
+    
+    console.log(resultSum)
+
+}
 
 
 /* Function Expression - Subtract Numbers */
